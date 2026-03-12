@@ -36,7 +36,7 @@ public class FileMemberRepository implements MemberRepository {
                 members.add(deserialize(line));
 
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("File error: " + filePath, e);
         }
         return members;
     }

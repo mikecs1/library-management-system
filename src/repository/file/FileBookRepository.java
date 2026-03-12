@@ -22,7 +22,7 @@ public class FileBookRepository implements BookRepository {
             writer.newLine();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("File error: " + filePath, e);
         }
     }
 
