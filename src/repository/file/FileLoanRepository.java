@@ -32,7 +32,7 @@ public class FileLoanRepository implements LoanRepository {
             writer.newLine();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("File error: " + filePath, e);
         }
     }
 

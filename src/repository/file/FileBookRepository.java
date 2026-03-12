@@ -40,7 +40,7 @@ public class FileBookRepository implements BookRepository {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("File error: " + filePath, e);
         }
 
         return books;
@@ -75,7 +75,7 @@ public class FileBookRepository implements BookRepository {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("File error: " + filePath, e);
         }
     }
 
@@ -95,7 +95,7 @@ public class FileBookRepository implements BookRepository {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("File error: " + filePath, e);
         }
     }
 

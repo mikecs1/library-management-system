@@ -23,7 +23,7 @@ public class FileMemberRepository implements MemberRepository {
             writer.newLine();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException("File error: " + filePath, e);
         }
     }
 
