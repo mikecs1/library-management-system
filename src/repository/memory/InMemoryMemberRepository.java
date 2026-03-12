@@ -8,7 +8,7 @@ import src.repository.MemberRepository;
 
 public class InMemoryMemberRepository implements MemberRepository {
 
-    private List<Member> members;
+    private List<Member> members = new ArrayList<>();
 
     @Override
     public void add(Member member) {

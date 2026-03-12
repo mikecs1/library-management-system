@@ -74,8 +74,8 @@ public class Main {
         // System.out.println("Error: " + ex.getMessage());
         // }
 
-        boolean useMemory = hasArg(args, "--file");
-        // boolean useMemory = hasArg(args, "--memory");
+        boolean useMemory = hasArg(args, "--memory");
+        // boolean useMemory = hasArg(args, "--file");
 
         BookRepository bookRepo;
         MemberRepository memberRepo;

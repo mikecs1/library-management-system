@@ -40,7 +40,7 @@ public class LibraryService {
         LocalDate actualTime = LocalDate.now();
 
         l.setLoanDate(actualTime);
-        l.setDueDate(actualTime.plusDays(14));
+        l.setDueDate(actualTime.plusDays(b.getLoanDuration()));
         l.setReturnDate(null);
 
         loanRepository.add(l);
