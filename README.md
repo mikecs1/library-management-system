@@ -1,4 +1,4 @@
-# Library Management System (APRO1)
+# Library Management System
 
 ## 1. Project description
 
@@ -16,7 +16,7 @@ This Java project implements a simple library management system. The application
 - **Polymorphism:** `Book.getLoanDuration()` is implemented differently in `PrintedBook` and `EBook`, allowing loan rules to vary by book type without changing service logic.
 - **Abstraction:** `Book` and `Person` are abstract base classes.
 
-## 3. Design pattern: Repository (DAO-style)
+## 3. Design pattern: Repository
 
 The project uses the **Repository pattern** to separate business logic from data access.
 
