@@ -74,4 +74,4 @@ In memory mode, all data is kept only in RAM (Java lists) and resets when the pr
 
 ## 7. UML class diagram
 
-See the attached UML class diagram in the submission (or include an exported image/PDF in the zip file).
+See the attached UML class diagram in the repository.
