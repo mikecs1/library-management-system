@@ -1,5 +1,0 @@
-EBOOK;2;1984;Orwell;.pdf;456
-PRINTED;3;Beloved;Toni Morrison
-PRINTED;4;The Great Gatsby;F. Scott Fitzgerald
-EBOOK;5;The Metamorphosis;Franz Kafka;.epub;512
-EBOOK;6;Frankenstein;Mary Shelley;.mobi;890

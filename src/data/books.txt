@@ -1,8 +1,3 @@
-PRINTED,7,To Kill a Mockingbird,Harper Lee,281
-EBOOK,8,Brave New World,Aldous Huxley,.epub,311
-PRINTED,9,Moby Dick,Herman Melville,635
-EBOOK,10,The Picture of Dorian Gray,Oscar Wilde,.pdf,254
-EBOOK,5,The Metamorphosis,Franz Kafka,.epub,512
 PRINTED,1,Death of Ivan Ilyich,Tolstoy,123
 EBOOK,2,1984,Orwell,.pdf,456
 PRINTED,3,Beloved,Toni Morrison,324
