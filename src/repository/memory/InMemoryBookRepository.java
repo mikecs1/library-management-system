@@ -8,7 +8,7 @@ import src.model.Book;
 
 public class InMemoryBookRepository implements BookRepository {
 
-    private final List<Book> books = new ArrayList<>();
+    private List<Book> books = new ArrayList<>();
 
     @Override
     public void add(Book book) {
