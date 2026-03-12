@@ -76,18 +76,19 @@ public class Main {
 
         boolean useMemory = hasArg(args, "--memory");
         // boolean useMemory = hasArg(args, "--file");
+        // boolean useMemory = true; // for quick testing without command-line arguments
 
         BookRepository bookRepo;
         MemberRepository memberRepo;
         LoanRepository loanRepo;
 
         if (useMemory) {
-            System.out.println("=== Running in MEMORY mode ===");
+            System.out.println("--- Running in MEMORY mode ---");
             bookRepo = new InMemoryBookRepository();
             memberRepo = new InMemoryMemberRepository();
             loanRepo = new InMemoryLoansRepository();
         } else {
-            System.out.println("=== Running in FILE mode ===");
+            System.out.println("--- Running in FILE mode ---");
             bookRepo = new FileBookRepository();
             memberRepo = new FileMemberRepository();
             loanRepo = new FileLoanRepository(bookRepo, memberRepo);
@@ -166,8 +167,8 @@ public class Main {
         }
     }
 
-    private static void printLoans(List<src.model.Loan> loans) {
-        for (src.model.Loan l : loans) {
+    private static void printLoans(List<Loan> loans) {
+        for (Loan l : loans) {
             System.out.println(l.getInfo());
             System.out.println("----------------");
         }

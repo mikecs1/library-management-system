@@ -4,7 +4,6 @@ import java.util.List;
 import src.model.Book;
 
 public interface BookRepository {
-
     void add(Book book);
 
     Book findByID(int id);
