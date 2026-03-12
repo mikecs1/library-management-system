@@ -10,7 +10,7 @@ public abstract class Book {
         this.id = _id;
         this.title = _title;
         this.author = _author;
-        this.available = true; // default value for availability is true
+        this.available = true;
     }
 
     public int getID() {

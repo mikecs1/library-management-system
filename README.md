@@ -74,4 +74,4 @@ In memory mode, all data is kept only in RAM (Java lists) and resets when the pr
 
 ## 7. UML class diagram
 
-See the attached UML class diagram in the repository.
+See the attached UML - Library Management System.pdf in the repository.
