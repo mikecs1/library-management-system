@@ -105,8 +105,8 @@ public class Main {
             System.out.println("\n--- Members ---");
             printMembers(memberRepo.findAll());
 
-            System.out.println("\n--- Loan book (bookID=1, memberID=1) ---");
-            service.loanBook(1, 1);
+            System.out.println("\n--- Loan book (bookID=2, memberID=2) ---");
+            service.loanBook(2, 2);
 
             System.out.println("\n--- Loans AFTER loan ---");
             printLoans(loanRepo.findAll());
@@ -115,7 +115,7 @@ public class Main {
             printBooks(bookRepo.findAll());
 
             System.out.println("\n--- Return book (bookID=1) ---");
-            service.returnBook(1);
+            service.returnBook(2);
 
             System.out.println("\n--- Loans AFTER return ---");
             printLoans(loanRepo.findAll());

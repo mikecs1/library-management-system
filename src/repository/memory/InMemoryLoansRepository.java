@@ -8,7 +8,7 @@ import src.repository.LoanRepository;
 
 public class InMemoryLoansRepository implements LoanRepository {
 
-    public List<Loan> loans = new ArrayList<>();
+    private List<Loan> loans = new ArrayList<>();
 
     @Override
     public void add(Loan loan) {

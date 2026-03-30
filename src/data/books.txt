@@ -1,4 +1,4 @@
-PRINTED,1,Death of Ivan Ilyich,Tolstoy,123
-EBOOK,2,1984,Orwell,.pdf,456
-PRINTED,3,Beloved,Toni Morrison,324
-EBOOK,4,The Metamorphosis,Franz Kafka,.epub,512
+PRINTED,1,Death of Ivan Ilyich,Tolstoy,123,true
+EBOOK,2,1984,Orwell,.pdf,456,true
+PRINTED,3,Beloved,Toni Morrison,324,true
+EBOOK,4,The Metamorphosis,Franz Kafka,.epub,512,true

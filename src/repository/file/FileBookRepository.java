@@ -102,11 +102,12 @@ public class FileBookRepository implements BookRepository {
     private String serialize(Book book) {
 
         if (book instanceof PrintedBook p)
-            return "PRINTED," + p.getID() + "," + p.getTitle() + "," + p.getAuthor() + "," + p.getNoPages();
+            return "PRINTED," + p.getID() + "," + p.getTitle() + "," + p.getAuthor() + "," + p.getNoPages() + ","
+                    + p.isAvailable();
 
         if (book instanceof EBook e)
             return "EBOOK," + e.getID() + "," + e.getTitle() + "," + e.getAuthor() + "," + e.getFormatExtension() + ","
-                    + e.getSize();
+                    + e.getSize() + "," + e.isAvailable();
 
         return "";
     }
@@ -117,21 +118,20 @@ public class FileBookRepository implements BookRepository {
 
         if (parts[0].equals("PRINTED")) {
 
-            return new PrintedBook(
-                    Integer.parseInt(parts[1]),
-                    parts[2],
-                    parts[3],
+            PrintedBook book = new PrintedBook(
+                    Integer.parseInt(parts[1]), parts[2], parts[3],
                     Integer.parseInt(parts[4]));
+            book.setAvailable(Boolean.parseBoolean(parts[5]));
+            return book;
         }
 
         if (parts[0].equals("EBOOK")) {
 
-            return new EBook(
-                    Integer.parseInt(parts[1]),
-                    parts[2],
-                    parts[3],
-                    parts[4],
-                    Integer.parseInt(parts[5]));
+            EBook book = new EBook(
+                    Integer.parseInt(parts[1]), parts[2], parts[3],
+                    parts[4], Integer.parseInt(parts[5]));
+            book.setAvailable(Boolean.parseBoolean(parts[6]));
+            return book;
         }
 
         return null;

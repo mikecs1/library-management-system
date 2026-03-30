@@ -35,6 +35,15 @@ public class LibraryService {
         if (!b.isAvailable())
             throw new IllegalArgumentException("Book is not available for renting");
 
+        for (Loan l : loanRepository.findAll()) {
+            if (l.getBookID() == bookID && l.getReturnDate() == null) {
+                throw new IllegalStateException("Book is already loaned and not yet returned");
+            }
+            if (l.getBookID() == bookID && l.getMemberID() == memberID && l.getReturnDate() == null) {
+                throw new IllegalStateException("This member already has this book on active loan");
+            }
+        }
+
         Loan l = new Loan(b, m);
 
         LocalDate actualTime = LocalDate.now();
